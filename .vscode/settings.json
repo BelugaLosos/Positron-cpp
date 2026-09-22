@@ -1,0 +1,6 @@
+{
+    "xmake.compileCommandsDirectory": ".vscode",
+    "C_Cpp.default.compileCommands": [
+        "${workspaceFolder}/.vscode/compile_commands.json"
+    ]
+}
