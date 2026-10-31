@@ -1,26 +1,17 @@
-#include <iostream>
 #include <vector>
 #include <memory>
-#include <boost/asio.hpp>
 #include <atomic>
-#include <thread>
-#include <future>
-#include <pthread.h>
+#include "RawCtxPool.hpp"
 using namespace std;
 using namespace boost::asio;
 
 class Scheduler {
 private:
-    using worker_guard_t = executor_work_guard<io_context::executor_type>;
-
-    vector<unique_ptr<io_context>> _contextes;
-    vector<worker_guard_t> _guards;
-    vector<thread> _threads_pool;
-    atomic<int> _schdule_counter {0};
-    int _num_threads;
+    unique_ptr<RawCtxPool> _ctx_pool;
+    atomic<size_t> _schdule_counter {0};
 
 public:
-    Scheduler(int concurrncy_ratio);
+    Scheduler(size_t concurrncy_ratio);
     ~Scheduler();
     io_context::executor_type schedule();
     void waitUntilSigterm();

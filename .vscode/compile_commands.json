@@ -8,4 +8,9 @@
   "directory": "/home/dan/Positron-cpp",
   "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++23", "-I", "/home/dan/.xmake/packages/b/boost/1.92.0/4f1f617d06bf4d449232088eb30520e7/include", "-DNDEBUG", "-o", "build/.objs/positron-cpp/linux/x86_64/release/src/scheduler/Scheduler.cpp.o", "src/scheduler/Scheduler.cpp"],
   "file": "src/scheduler/Scheduler.cpp"
+},
+{
+  "directory": "/home/dan/Positron-cpp",
+  "arguments": ["/usr/bin/g++", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++23", "-I", "/home/dan/.xmake/packages/b/boost/1.92.0/4f1f617d06bf4d449232088eb30520e7/include", "-DNDEBUG", "-o", "build/.objs/positron-cpp/linux/x86_64/release/src/scheduler/RawCtxPool.cpp.o", "src/scheduler/RawCtxPool.cpp"],
+  "file": "src/scheduler/RawCtxPool.cpp"
 }]
